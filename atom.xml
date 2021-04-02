@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-01T13:54:21.844Z</updated>
+  <updated>2021-03-26T15:27:37.639Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>目的</title>
-    <link href="http://example.com/2021/03/27/%E7%9B%AE%E7%9A%84/"/>
-    <id>http://example.com/2021/03/27/%E7%9B%AE%E7%9A%84/</id>
-    <published>2021-03-26T18:13:55.000Z</published>
-    <updated>2021-04-01T13:54:21.844Z</updated>
-    
-    <content type="html"><![CDATA[<p>清明节快到了<br>设立这个博客的目的是啥，其实可以很明确，也可能很混乱，毕竟现在不是正常时间，思绪并不是很清晰<br>但是为什么要写这篇文章我还是知道的<br>可能是听到小学时代朋友母亲的死讯的时候，不说点啥难受</p><p>我这位朋友，印象最深大概就是那一次帮我妈烧菜<br>仅仅因为她的玩笑，不小心自己用菜刀切到中指<br>到现在，我手指上还有一个浅浅的疤痕，就是那次留下的<br>三年级的我不知道轻重，当场就狠狠地踢了她几脚，然后理所当然地把她弄哭了<br>这个开不起玩笑、情绪敏感的病我现在还没有治好<br>已经十多年没有联系，以我的脸皮，有多少的愧疚和歉意潜藏起来，这么多年也只是心里想想  </p><p>她的母亲好像是得了癌，没几个月就死了<br>回想起她之前那么迅速地结婚，其中的原因大抵如此<br>同龄人的母亲正在逐渐老去<br>我也如此  </p><p>绝对的理性真的能勇敢地面对死亡吗？<br>我持否定意见。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;清明节快到了&lt;br&gt;设立这个博客的目的是啥，其实可以很明确，也可能很混乱，毕竟现在不是正常时间，思绪并不是很清晰&lt;br&gt;但是为什么要写这篇文章我还是知道的&lt;br&gt;可能是听到小学时代朋友母亲的死讯的时候，不说点啥难受&lt;/p&gt;
-&lt;p&gt;我这位朋友，印象最深大概就是那一次帮我妈烧菜</summary>
-      
-    
-    
-    
-    
-    <category term="杂" scheme="http://example.com/tags/%E6%9D%82/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
