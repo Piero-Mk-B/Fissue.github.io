@@ -238,11 +238,17 @@
         <div class="post-content">
             <p>在hexo博客搭建完成后，后续写作方法：</p>
 <h2 id="配置md文件的命名规则"><a href="#配置md文件的命名规则" class="headerlink" title="配置md文件的命名规则"></a>配置md文件的命名规则</h2><p>在_config.yml里可以设置这份md文件的默认命名规则,在new_post_name一栏<br>主要是增加md文件名称的日期，如2019-01-31-hexo-blog.md这样的形式，相关变量主要有以下几种：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:title          #标题 （小写， 空格将会被替换为短杠）</span><br><span class="line">:year           #创建年份 如2020</span><br><span class="line">:month          #创建的月份 前面有0 如02</span><br><span class="line">:i_month        #创建的月份 前面没有0 如2</span><br><span class="line">:day            #创建的日期 前面有0 如09</span><br><span class="line">:i_day          #创建的日期 前面没有0 如9</span><br></pre></td></tr></table></figure>
-
+<pre><code>:title          #标题 （小写， 空格将会被替换为短杠）
+:year           #创建年份 如2020
+:month          #创建的月份 前面有0 如02
+:i_month        #创建的月份 前面没有0 如2
+:day            #创建的日期 前面有0 如09
+:i_day          #创建的日期 前面没有0 如9
+</code></pre>
 <p>同样在_config.yml里面的permalink属性是更改在博客URL里显示md文件的日期和标题</p>
 <h2 id="md文件的创建"><a href="#md文件的创建" class="headerlink" title="md文件的创建"></a>md文件的创建</h2><p>通过使用如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>$ hexo new [layout] &lt;title&gt;
+</code></pre>
 <p>创建一篇新的文章</p>
 <table>
 <thead>
@@ -269,30 +275,39 @@
 </tr>
 </tbody></table>
 <p>可以用pulish命令将草稿移动到source/_posts文件夹下，实现发布</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>$ hexo publish [layout] &lt;title&gt;
+</code></pre>
 <p>这条和<code>hexo p &lt;filename&gt;</code>效果应该一样，使用<code>hexo s --drafts</code>可以在本地强行预览草稿。</p>
 <p>用的最多的应该就是<code>hexo n post xxx </code>这种形式（n是new的简写），如果不写标题，默认标题为post<br>这种方式会同时建立一个和标题名同样的文件夹，用于放图片之类插入博客的外部内容</p>
 <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>创建md文件后，可以去source/_posts文件夹下打开相应的文件，里面主要有三个：title、date和tags<br>title可以随意改，date也是，不过一般没必要改。<br>tags的用法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [tag1, tag2, tag3]</span><br></pre></td></tr></table></figure>
+<pre><code>tags: [tag1, tag2, tag3]
+</code></pre>
 <p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">  - tag1</span><br><span class="line">  - tag2</span><br><span class="line">  - tag3</span><br></pre></td></tr></table></figure>
-
+<pre><code>tags:
+  - tag1
+  - tag2
+  - tag3
+</code></pre>
 <p>关于头部（Front-matter）这块，可以参阅<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">hexo文档</a></p>
 <p>再说一下插入图片，md插入图片的语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](path [title])</span><br></pre></td></tr></table></figure>
+<pre><code>![alt](path [title])
+</code></pre>
 <p>*path是表示图片路径，可以使用相对或者绝对路径。<br>*alt是可选的，是图片无法加载时的替代描述文本。<br>*title是可选的，是图片的标题。</p>
 <p>图片可以放在_posts同名文件夹内。</p>
 <h2 id="写作完成后"><a href="#写作完成后" class="headerlink" title="写作完成后"></a>写作完成后</h2><p>一般可以先本地看看怎么样，通过在博客根目录打开git bash，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g            #g是generate的简写</span><br></pre></td></tr></table></figure>
+<pre><code>$ hexo g            #g是generate的简写
+</code></pre>
 <p>生成静态网页，再输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s            #s是server的简写</span><br></pre></td></tr></table></figure>
+<pre><code>$ hexo s            #s是server的简写
+</code></pre>
 <p>可以在本地浏览，地址<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果，最后输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d            #d是deploy的简写</span><br></pre></td></tr></table></figure>
+<pre><code>$ hexo d            #d是deploy的简写
+</code></pre>
 <p>上传到github就可以实现更新。</p>
 <p>另外清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
 <p>在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，可能需要运行该命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
+<pre><code>$ hexo clean
+</code></pre>
 <p>另外可以参考<br><a target="_blank" rel="noopener" href="https://sirice.netlify.app/posts/2019/06/02/Build_a_hexo_theme">从零开始创建一个hexo主题</a><br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">hexo文档</a></p>
 
         </div>
